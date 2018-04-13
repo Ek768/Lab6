@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Accessories.cs" />
     <Compile Include="Gitara.cs" />
+    <Compile Include="IAccessories.cs" />
     <Compile Include="Nomenklatura.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

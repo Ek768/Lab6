@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class Accessories: Tovar
+    class Accessories: Tovar, IAccessories
     {
         public string Name { get; set; }
         public string Product_Accessory { get; set; }
