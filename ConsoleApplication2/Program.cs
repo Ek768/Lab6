@@ -15,9 +15,11 @@ namespace ConsoleApplication2
             Nomenklatura baraban_nomenklatura = new Nomenklatura("baraban", new DateTime(2017, 01, 05));
            
             Gitara tovar1 = new Gitara(gitara_nomenklatura, 15000, "electric_guitar", "YAMAHA", new DateTime(2015, 03, 07));
+            Skripka tovar2 = new Skripka(skripka_nomenklatura, 50000, "Crafter", 1, new DateTime(2017, 05, 08));
 
             List<Tovar> ListTovar = new List<Tovar>();
             ListTovar.Add(tovar1);
+            ListTovar.Add(tovar2);
 
             foreach (Tovar t in ListTovar)
             {
