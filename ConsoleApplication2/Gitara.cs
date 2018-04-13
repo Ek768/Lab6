@@ -18,9 +18,9 @@ namespace ConsoleApplication2
             this.Marka_instrumenta = Marka_instrumenta;
             this.Release_data = Release_data;
         }
-        public override void Get_info()
+        public override string tv()
         {
-            Console.WriteLine(ID.ToString() + ", " + Price.ToString() + ", " + Vid_instrumenta.ToString() + ", " + Marka_instrumenta.ToString() + ", " + Release_data.ToString("dd MMMM, yyyy"));
+            return ID + ", " + Vid_instrumenta + ", " + Marka_instrumenta + ", " + Release_data.ToString("dd MMMM yyyy") + ", " + Price;
         }
     }
 }

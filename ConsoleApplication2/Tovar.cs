@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class Tovar
+    abstract class Tovar
     {
         public Nomenklatura ID { get; set; }
         public double Price { get; set; }
@@ -17,9 +17,6 @@ namespace ConsoleApplication2
             this.Price = Price;
         }
 
-        public virtual void Get_info()
-        {
-            Console.WriteLine(ID.ToString() + ", " + Price.ToString());
-        }
+        public abstract string tv();
     }
 }
