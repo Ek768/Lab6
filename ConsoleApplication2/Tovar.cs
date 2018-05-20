@@ -8,9 +8,22 @@ namespace ConsoleApplication2
 {
     abstract class Tovar
     {
-        public Nomenklatura ID { get; set; }
-        public double Price { get; set; }
+        private double _Price;
 
+        public double Price {
+            get
+            {
+                return _Price;
+            }
+            set
+            {
+                if (value > 0)
+                    _Price = value;
+                else
+                    Console.WriteLine("Неверное значение цены");
+            }
+        }
+        public Nomenklatura ID { get; set; }
         public Tovar(Nomenklatura ID, double Price)
         {
             this.ID = ID;

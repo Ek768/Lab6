@@ -8,19 +8,32 @@ namespace ConsoleApplication2
 {
     class Accessories: Tovar, IAccessories
     {
-        public string Name { get; set; }
-        public string Product_Accessory { get; set; }
+        private string _Name;
+
+        public string Name
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(_Name))
+                    throw new Exception("Название аксессуара не может быть пустым");
+                else
+                    return _Name;
+            }
+            set
+            {
+                _Name = value;
+            }
+        }
         public Nomenklatura TovarCcategory { get; set; }
 
         public Accessories(Nomenklatura ID, string Name, double Price, Nomenklatura TovarCcategory) : base(ID, Price)
         {
             this.Name = Name;
             this.Price = Price;
-            this.Product_Accessory = Product_Accessory;
         }
         public override string tv()
         {
-            return Name + ", " + Price + ", " + Product_Accessory;
+            return Name + ", " + Price;
         }
     }
 }

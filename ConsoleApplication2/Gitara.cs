@@ -8,9 +8,51 @@ namespace ConsoleApplication2
 {
     class Gitara: Tovar
     {
-        public string Vid_instrumenta { get; set; }
-        public string Marka_instrumenta { get; set; }
-        public DateTime Release_data { get; set; }
+        private string _Vid_instrumenta;
+        private string _Marka_instrumenta;
+        private DateTime _Release_data;
+
+        public string Vid_instrumenta
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(_Vid_instrumenta))
+                    throw new Exception("Вид инструмента не может быть пустым");
+                else
+                    return _Vid_instrumenta;
+            }
+            set
+            {
+                _Vid_instrumenta = value;
+            }
+        }
+        public string Marka_instrumenta {
+            get
+            {
+                if (String.IsNullOrEmpty(_Marka_instrumenta))
+                    throw new Exception("Марка инструмента не может быть пустой");
+                else
+                    return _Marka_instrumenta;
+            }
+            set
+            {
+                _Marka_instrumenta = value;
+            }
+        }
+        public DateTime Release_data
+        {
+            get
+            {
+                if (_Release_data == null)
+                    throw new Exception("Укажите дату");
+                else
+                    return _Release_data;
+            }
+            set
+            {
+                _Release_data = value;
+            }
+        }
 
         public Gitara(Nomenklatura ID, double Price, string Vid_instrumenta, string Marka_instrumenta, DateTime Release_data) : base(ID, Price)
         {

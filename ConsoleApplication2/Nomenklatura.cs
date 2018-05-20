@@ -7,9 +7,38 @@ using System.Threading.Tasks;
 namespace ConsoleApplication2
 {
     class Nomenklatura
-    { 
-            public string Name { get; set; }
-            public DateTime Data_registration { get; set; }
+    {
+        private string _Name;
+        private DateTime _Data_registration;
+
+        public string Name
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(_Name))
+                    throw new Exception("Название инструмента не может быть пустым");
+                else
+                    return _Name;
+            }
+            set
+            {
+                _Name = value;
+            }
+        }
+            public DateTime Data_registration
+        {
+            get
+            {
+                if (_Data_registration == null)
+                    throw new Exception("Укажите дату");
+                else
+                    return _Data_registration;
+            }
+            set
+            {
+                _Data_registration = value;
+            }
+        }
             public Nomenklatura(string Name, DateTime Data_registration)
             {
                 this.Name = Name;
