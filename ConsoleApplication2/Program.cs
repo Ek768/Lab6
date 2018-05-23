@@ -24,7 +24,7 @@ namespace ConsoleApplication2
             {
                 Console.WriteLine(t.tv());
             }
-            Console.WriteLine("Из них аксессуары:");
+            Console.WriteLine("\nИз них аксессуары:");
             foreach (Tovar t in ListTovar.Where(i1 => i1 is IAccessories))
             {
                 Console.WriteLine(t.tv());

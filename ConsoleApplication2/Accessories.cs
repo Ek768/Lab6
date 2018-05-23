@@ -33,7 +33,7 @@ namespace ConsoleApplication2
         }
         public override string tv()
         {
-            return Name + ", " + Price;
+            return "\nНоменклатура: " + ID + "\nЦена: " + Price;
         }
     }
 }

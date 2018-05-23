@@ -8,6 +8,6 @@ namespace ConsoleApplication2
 {
     interface IAccessories
     {
-        Nomenklatura TovarCcategory { get; set; }
+       Nomenklatura TovarCcategory { get; set; }
     }
 }

@@ -62,7 +62,7 @@ namespace ConsoleApplication2
         }
         public override string tv()
         {
-            return ID + ", " + Vid_instrumenta + ", " + Marka_instrumenta + ", " + Release_data.ToString("dd MMMM yyyy") + ", " + Price;
+            return "Номенклатура: " + ID + "\nВид инструмента: " + Vid_instrumenta + "\nМарка инструмента: " + Marka_instrumenta + "\nДата производства: " + Release_data.ToString("dd MMMM yyyy") + "\nЦена: " + Price;
         }
     }
 }
