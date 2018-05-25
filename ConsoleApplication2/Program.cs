@@ -22,12 +22,12 @@ namespace ConsoleApplication2
 
             foreach (Tovar t in ListTovar)
             {
-                Console.WriteLine(t.tv());
+                Console.WriteLine(t.TovarInfo());
             }
             Console.WriteLine("\nИз них аксессуары:");
             foreach (Tovar t in ListTovar.Where(i1 => i1 is IAccessories))
             {
-                Console.WriteLine(t.tv());
+                Console.WriteLine(t.TovarInfo());
             }
 
             Console.ReadLine();

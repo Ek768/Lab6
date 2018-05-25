@@ -26,14 +26,14 @@ namespace ConsoleApplication2
         }
         public Nomenklatura TovarCcategory { get; set; }
 
-        public Accessories(Nomenklatura ID, string Name, double Price, Nomenklatura TovarCcategory) : base(ID, Price)
+        public Accessories(Nomenklatura Name_nomenklatura, string Name, double Price, Nomenklatura TovarCcategory) : base(Name_nomenklatura, Price)
         {
             this.Name = Name;
             this.Price = Price;
         }
-        public override string tv()
+        public override string TovarInfo()
         {
-            return "\nНоменклатура: " + ID + "\nЦена: " + Price;
+            return "\nНоменклатура: " + Name_nomenklatura + "\nЦена: " + Price;
         }
     }
 }

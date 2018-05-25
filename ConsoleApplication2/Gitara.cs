@@ -54,15 +54,15 @@ namespace ConsoleApplication2
             }
         }
 
-        public Gitara(Nomenklatura ID, double Price, string Vid_instrumenta, string Marka_instrumenta, DateTime Release_data) : base(ID, Price)
+        public Gitara(Nomenklatura Name_nomenklatura, double Price, string Vid_instrumenta, string Marka_instrumenta, DateTime Release_data) : base(Name_nomenklatura, Price)
         {
             this.Vid_instrumenta = Vid_instrumenta;
             this.Marka_instrumenta = Marka_instrumenta;
             this.Release_data = Release_data;
         }
-        public override string tv()
+        public override string TovarInfo()
         {
-            return "Номенклатура: " + ID + "\nВид инструмента: " + Vid_instrumenta + "\nМарка инструмента: " + Marka_instrumenta + "\nДата производства: " + Release_data.ToString("dd MMMM yyyy") + "\nЦена: " + Price;
+            return "Номенклатура: " + Name_nomenklatura + "\nВид инструмента: " + Vid_instrumenta + "\nМарка инструмента: " + Marka_instrumenta + "\nДата производства: " + Release_data.ToString("dd MMMM yyyy") + "\nЦена: " + Price;
         }
     }
 }

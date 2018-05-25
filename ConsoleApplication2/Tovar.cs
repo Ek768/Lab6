@@ -9,6 +9,7 @@ namespace ConsoleApplication2
     abstract class Tovar
     {
         private double _Price;
+        private Nomenklatura _Name_nomenklatura;
 
         public double Price {
             get
@@ -23,13 +24,26 @@ namespace ConsoleApplication2
                     Console.WriteLine("Неверное значение цены");
             }
         }
-        public Nomenklatura ID { get; set; }
-        public Tovar(Nomenklatura ID, double Price)
+        public Nomenklatura Name_nomenklatura
         {
-            this.ID = ID;
+            get
+            {
+                if (_Name_nomenklatura == null)
+                    throw new Exception("Номенклатуры нет");
+                else
+                    return _Name_nomenklatura;
+            }
+            set
+            {
+                _Name_nomenklatura = value;
+            }
+        }
+        public Tovar(Nomenklatura Name_nomenklatura, double Price)
+        {
+            this.Name_nomenklatura = Name_nomenklatura;
             this.Price = Price;
         }
 
-        public abstract string tv();
+        public abstract string TovarInfo();
     }
 }
